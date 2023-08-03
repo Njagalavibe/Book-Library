@@ -140,7 +140,9 @@ ul {
 }
 #added-books{
     display: flex;
-    margin-top: 6em;
+    margin: 5em 2em 1em 2em;
+    flex-wrap: wrap;
+
 }
 .book-card{
     border: 2px solid var(--form-color);
