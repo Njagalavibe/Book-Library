@@ -79,7 +79,7 @@ ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 25%;
+    top: 23%;
     left: 40.5%;
     border: 2px solid var(--form-color);
     border-radius: 10px;
@@ -138,3 +138,35 @@ ul {
     color: var( --container-color);
     background-color:var(--header-color) ;
 }
+#added-books{
+    display: flex;
+    margin-top: 6em;
+}
+.book-card{
+    border: 2px solid var(--form-color);
+    background-color: var(--form-color);
+    margin: 2em 2em 2em 2em;
+	width: 300px;
+	height: 220px;
+	text-align: center;
+	border-radius: 3px;
+    padding: 1em;
+    cursor: pointer;
+  
+
+}
+.book-title{
+   font-size: 1.6em;
+   color: var(--header-color);
+   margin-bottom: .9em;
+}
+.book-author,.book-pages,.book-language{
+    font-size: 1.3em;
+    color: var(--header-color);
+    margin-bottom: .2em; 
+ }
+ .book-progress{
+    font-size: 1.3em;
+    color: var(--header-color);
+    margin-bottom: .2em; 
+ }
