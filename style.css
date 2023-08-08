@@ -194,7 +194,7 @@ ul {
     color: var(--button-text-color);
     margin-bottom: .2em;
     font-weight: lighter;
-   /* background-color:var(--book-progress-color) ;*/
+   background-color:var(--header-color) ;
 
 }
 .buttons{
