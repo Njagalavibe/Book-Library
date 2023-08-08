@@ -8,6 +8,7 @@
     --header-color: #27374D;
     --container-color: #FEFBF6;
     --form-color: #EEEEEE;
+    --book-details-color:#FFFFFF;
 
 }
 
@@ -148,8 +149,8 @@ ul {
     border: 2px solid var(--form-color);
     background-color: var(--form-color);
     margin: 2em 2em 2em 2em;
-	width: 300px;
-	height: 220px;
+	min-width: 300px;
+	min-height: 220px;
 	text-align: center;
 	border-radius: 3px;
     padding: 1em;
@@ -158,17 +159,31 @@ ul {
 
 }
 .book-title{
-   font-size: 1.6em;
+   font-size: 2em;
    color: var(--header-color);
-   margin-bottom: .9em;
+   margin-bottom: .6em;
+
 }
+.book-details{
+    border: 1px solid var(--book-details-color);
+    padding: .5em .5em;
+    background:var(--book-details-color) ;
+    color:var(--header-color) ;
+}
+
 .book-author,.book-pages,.book-language{
     font-size: 1.3em;
     color: var(--header-color);
     margin-bottom: .2em; 
+    font-weight: lighter;
+    display: block;
+   
  }
  .book-progress{
     font-size: 1.3em;
     color: var(--header-color);
     margin-bottom: .2em; 
+    font-weight: lighter;
+    color: var(--header-color);
+    
  }
