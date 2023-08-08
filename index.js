@@ -38,8 +38,8 @@ function render() {
                 <h4 class="book-progress">Read : ${book.read ? 'Complete' : 'Not Complete'}</h4>
                 </div>
                 <div class="buttons">
-                    <button class="delete-button" onclick = "deleteBook(${i})">DELETE</button>
-                    <button class="toggle-read-btn" onclick="toggleRead(${i})">Toggle Read</button>
+                    <button class="delete-button" onclick = "deleteBook(${i})">Delete</button>
+                    <button class="toggle-read-btn" onclick="toggleRead(${i})">Read status</button>
                 </div>
             
         </div>`;
