@@ -12,6 +12,13 @@ function Book(title, author, pages, language, read) {
         this.language = language
     this.read = read;
 }
+Book.prototype.toggleRead = function () {
+    this.read = !this.read
+}
+function toggleRead(index) {
+    myLibrary[index].toggleRead();
+    render();
+}
 
 function render() {
     let addedBook = document.querySelector("#added-books");
@@ -29,23 +36,35 @@ function render() {
                 <h4 class="book-pages">Pages : ${book.pages} Pages</h4>
                 <h4 class="book-language">Languages : ${book.language}</h4>
                 <h4 class="book-progress">Read : ${book.read ? 'Complete' : "Not Complete"}</h4>
-            </div>
+                </div>
+                <div class="buttons">
+                    <button class="delete-button" onclick = "deleteBook(${i})">DELETE</button>
+                    <button class="toggle-read-btn" onclick="toggleRead(${i})">Toggle Read</button>
+                </div>
+            
         </div>`;
         addedBook.appendChild(bookDetails);
         let bookProgress = document.querySelector(".book-progress")
         if (book.read == true) {
-            bookProgress.style.backgroundColor = "green";
-            
+            bookProgress.style.backgroundColor = "#16C79A";
+
+
         } else {
-            bookProgress.style.backgroundColor = "red";
-           
+            bookProgress.style.backgroundColor = "#FF6363";
         }
 
     }
-
-
 }
 
+function deleteBook(index) {
+    myLibrary.splice(index, 1);
+    render()
+}
+
+/*
+let deleteButton = document.querySelector(".delete-button")
+deleteButton.innerHTML = "<i class="fa-solid fa-bin-recycle"></i>"
+*/
 
 function addBookToLibrary() {
     let title = document.querySelector("#title").value;
@@ -55,6 +74,7 @@ function addBookToLibrary() {
     let read = document.querySelector(".tick").checked;
     let newBook = new Book(title, author, pages, language, read);
     myLibrary.push(newBook);
+
     render();
 }
 
@@ -72,3 +92,6 @@ form.addEventListener("submit", function (e) {
 
 
 })
+
+
+
