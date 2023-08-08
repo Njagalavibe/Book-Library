@@ -29,7 +29,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5em 3em .5em 2.5em;
+    padding: 1.5em 2.5em .5em 2.5em;
 }
 
 .title {

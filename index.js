@@ -45,13 +45,17 @@ function render() {
         </div>`;
         addedBook.appendChild(bookDetails);
         let bookProgress = document.querySelector(".book-progress")
-        if (book.read == true) {
-            bookProgress.style.backgroundColor = "#16C79A";
+        
+            if (book.read == true) {
+                bookProgress.style.backgroundColor = "#16C79A";
+                
 
 
-        } else {
-            bookProgress.style.backgroundColor = "#FF6363";
-        }
+            } else {
+                bookProgress.style.backgroundColor = "#FF6363";
+            }
+        
+        
 
     }
 }
